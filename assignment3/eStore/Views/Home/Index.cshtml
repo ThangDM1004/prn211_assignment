@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "Home Page";
+    var value = Context.Request.HttpContext.Session.GetString("role");
+	
+	if (value == null)
+	{
+		Context.Response.Redirect("/Home/Login");
+	};
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @value</h1>
+   
+</div>

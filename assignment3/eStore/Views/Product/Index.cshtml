@@ -1,0 +1,83 @@
+﻿@model IEnumerable<BusinessObjects.FlowerBouquet>
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "Index";
+    var value = Context.Request.HttpContext.Session.GetString("role");
+    var id = Context.Request.HttpContext.Session.GetString("id");
+   
+    if (value == null)
+    {
+        Context.Response.Redirect("/Home/Login");
+    };
+}
+
+<h1>Products</h1>
+@if(value == "Admin")
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitsInStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetStatus)
+            </th>
+          
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlowerBouquetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitsInStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlowerBouquetStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier.SupplierId)
+            </td>
+            <td>
+                    @if(value == "Admin")
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.FlowerBouquetId">Edit</a> <span>|</span>
+                        <a asp-action="Details" asp-route-id="@item.FlowerBouquetId">Details</a> <span>|</span>
+                        <a asp-action="Delete" asp-route-id="@item.FlowerBouquetId">Delete</a>
+                    }else{
+                        <a asp-action="Details" asp-route-id="@item.FlowerBouquetId">Details</a> <span>|</span>
+                        <a asp-action="Order" asp-route-id="@item.FlowerBouquetId">Order</a>
+                    }
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

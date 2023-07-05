@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+	var value = Context.Request.HttpContext.Session.GetString("role");
+	if(value == null)
+	{
+		Layout = "_Login";
+	}
+	else
+	{
+		Layout = "_Layout";
+	}
+
+}

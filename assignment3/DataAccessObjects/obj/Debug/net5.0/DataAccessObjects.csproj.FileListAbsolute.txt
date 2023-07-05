@@ -1,0 +1,15 @@
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\bin\Debug\net5.0\DataAccessObjects.deps.json
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\bin\Debug\net5.0\DataAccessObjects.dll
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\bin\Debug\net5.0\DataAccessObjects.pdb
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\bin\Debug\net5.0\BusinessObjects.dll
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\bin\Debug\net5.0\BusinessObjects.pdb
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\DataAccessObjects.csproj.AssemblyReference.cache
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\DataAccessObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\DataAccessObjects.AssemblyInfoInputs.cache
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\DataAccessObjects.AssemblyInfo.cs
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\DataAccessObjects.csproj.CoreCompileInputs.cache
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\DataAccessObjects.csproj.CopyComplete
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\DataAccessObjects.dll
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\refint\DataAccessObjects.dll
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\DataAccessObjects.pdb
+D:\Ass03Solution_SE1736_DANGMINHTHANG\DataAccessObjects\obj\Debug\net5.0\ref\DataAccessObjects.dll

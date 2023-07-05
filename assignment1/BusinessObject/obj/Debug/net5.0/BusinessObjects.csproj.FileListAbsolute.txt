@@ -1,0 +1,12 @@
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\bin\Debug\net5.0\BusinessObjects.deps.json
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\bin\Debug\net5.0\BusinessObjects.dll
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\bin\Debug\net5.0\BusinessObjects.pdb
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\BusinessObjects.csproj.AssemblyReference.cache
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\BusinessObjects.AssemblyInfoInputs.cache
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\BusinessObjects.AssemblyInfo.cs
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\BusinessObjects.csproj.CoreCompileInputs.cache
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\BusinessObjects.dll
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\refint\BusinessObjects.dll
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\BusinessObjects.pdb
+E:\Ass01Solution_SE1736_DANGMINHTHANG\BusinessObject\obj\Debug\net5.0\ref\BusinessObjects.dll

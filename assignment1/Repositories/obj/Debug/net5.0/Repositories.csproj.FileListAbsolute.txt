@@ -1,0 +1,17 @@
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\bin\Debug\net5.0\Repositories.deps.json
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\bin\Debug\net5.0\Repositories.dll
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\bin\Debug\net5.0\Repositories.pdb
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\bin\Debug\net5.0\BusinessObjects.dll
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\bin\Debug\net5.0\DataAccessObjects.dll
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\bin\Debug\net5.0\DataAccessObjects.pdb
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\bin\Debug\net5.0\BusinessObjects.pdb
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\Repositories.csproj.AssemblyReference.cache
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\Repositories.AssemblyInfoInputs.cache
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\Repositories.AssemblyInfo.cs
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\Repositories.csproj.CoreCompileInputs.cache
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\Repositories.csproj.CopyComplete
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\Repositories.dll
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\refint\Repositories.dll
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\Repositories.pdb
+E:\Ass01Solution_SE1736_DANGMINHTHANG\Repositories\obj\Debug\net5.0\ref\Repositories.dll

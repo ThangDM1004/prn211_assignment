@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "JuZjHqYjPUHjfO/+ZGzIumGMKsjTA41ZOtJjxPpcIOB3E1bm3AFxUGYHeoRRxao7S+1nl+Xnv91eN8tmp1WYHA==",
+  "success": true,
+  "projectFilePath": "E:\\Ass01Solution_SE1736_DANGMINHTHANG\\Ass01Solution_SE1736_DANGMINHTHANG\\Ass01Solution_SE1736_DANGMINHTHANG.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MSI AD\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
+    "C:\\Users\\MSI AD\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\MSI AD\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\5.0.0\\microsoft.extensions.configuration.fileextensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\MSI AD\\.nuget\\packages\\microsoft.extensions.configuration.json\\5.0.0\\microsoft.extensions.configuration.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\MSI AD\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\MSI AD\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
+    "C:\\Users\\MSI AD\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "C:\\Users\\MSI AD\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

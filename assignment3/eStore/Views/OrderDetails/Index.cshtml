@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BusinessObjects.OrderDetail>
+@using Repositories;
+@using Microsoft.AspNetCore.Http;
+@{
+	ViewData["Title"] = "Index";
+	IProductRepository pro = new ProductRepository();
+	IOrderRepository o = new OrderRepository();
+	var value = Context.Request.HttpContext.Session.GetString("role");
+	if (value == null)
+	{
+		Context.Response.Redirect("/Home/Login");
+	};
+}
+
+<h1>Order Details</h1>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.FlowerBouquet)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.UnitPrice)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Quantity)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Discount)
+			</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@pro.GetProductById(item.FlowerBouquetId).FlowerBouquetName
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.UnitPrice)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Quantity)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Discount)
+				</td>
+				
+			</tr>
+		}
+	</tbody>
+	
+</table>
+<a asp-action="Index" asp-controller="Orders">Back to List</a>
