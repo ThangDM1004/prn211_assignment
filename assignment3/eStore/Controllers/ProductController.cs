@@ -19,17 +19,18 @@ namespace eStore.Controllers
 		IProductRepository repo = new ProductRepository();
 		IOrderRepository o = new OrderRepository();
 		IOrderDetailRepository odRep = new OrderDetailRepository();
+		ICustomerRepository cus = new CustomerRepository();
 		// GET: Product
 		public async Task<IActionResult> Index()
 		{
 
 			return View(repo.GetAllProduct());
 		}
-        public async Task<IActionResult> Search()
-        {
-				return View(repo.GetAllProduct());
-            
-        }
+		public async Task<IActionResult> Search()
+		{
+			return View(repo.GetAllProduct());
+
+		}
 		public ActionResult SearchCheck(string name, int price)
 		{
 			decimal min = 0;
@@ -39,46 +40,82 @@ namespace eStore.Controllers
 				min = decimal.Parse("0");
 				max = decimal.Parse("100");
 			}
-			else if(price == 2)
+			else if (price == 2)
 			{
-				min = decimal.Parse("101") ; 
+				min = decimal.Parse("101");
 				max = decimal.Parse("200");
 			}
 
-			return View(repo.SearchProduct(name,min,max));
+			return View(repo.SearchProduct(name, min, max));
 		}
-        public ActionResult Order(int? id)
-        {
-			HttpContext.Session.Remove("CheckExist");
-			OrderDetail od = new OrderDetail();
-			od.FlowerBouquetId = (int)id;
-            String cus_id = HttpContext.Session.GetString("id");
-			int int_id = int.Parse(cus_id);
-			od.OrderId = o.GetOrderByCustomerID(int_id).OrderId;
-			od.UnitPrice = repo.GetProductById((int)id).UnitPrice;
-			od.Quantity = 1;
-			od.Discount = 0;
-			Order order = o.GetOrderByID(o.GetOrderByCustomerID(int_id).OrderId);
-			if(odRep.GetOrderDetailByOrderIdAndProductId(o.GetOrderByCustomerID(int_id), repo.GetProductById((int)id)) != null)
+		public int CreateOrderID()
+		{
+			int id = 0;
+			var order = o.GetAllOrder().OrderByDescending(o => o.OrderId).FirstOrDefault();
+			id = order.OrderId + 1;
+			return id;
+		}
+		public OrderDetail GetNewOrderDetails(Order order, FlowerBouquet flowerBouquet)
+		{
+			OrderDetail orderDetail = odRep.GetOrderDetailByOrderIdAndProductId(order, flowerBouquet);
+			if (orderDetail == null)
 			{
-				od.Quantity = odRep.GetOrderDetailByOrderIdAndProductId(o.GetOrderByCustomerID(int_id), repo.GetProductById((int)id)).Quantity + 1;
-				odRep.UpdateOrderDetail(od);
-				order.Total += od.UnitPrice;
-				o.UpdateOrder(order);
+				orderDetail = new OrderDetail
+				{
+					OrderId = order.OrderId,
+					FlowerBouquetId = flowerBouquet.FlowerBouquetId,
+					UnitPrice = flowerBouquet.UnitPrice,
+					Quantity = 1,
+					Discount = 0
+				};
+			}
+			else { 
+				orderDetail.Quantity += 1; 
+			}
+			return orderDetail;
+		}
+		public void AddOrUpdateOrderDetail(Order order, FlowerBouquet flowerBouquet, OrderDetail orderDetail)
+		{
+			OrderDetail orderDetail1 = odRep.GetOrderDetailByOrderIdAndProductId(order, flowerBouquet);
+			if (orderDetail1 == null) { odRep.AddOrderDetail(orderDetail); }
+			else odRep.UpdateOrderDetail(orderDetail);
+		}
+		public ActionResult Order(int? id)
+		{
+			String cus_id = HttpContext.Session.GetString("id");
+			int int_id = int.Parse(cus_id);
+			Order order = o.GetOrderByCustomerID(int_id);
+			if (order == null || order.OrderStatus.Trim() == "Done")
+			{
+				order = new Order
+				{
+					OrderId = CreateOrderID(),
+					CustomerId = int_id,
+					OrderDate = DateTime.Now,
+					OrderStatus = "Not Done",
+					Total = 0
+				};
+
+
+				OrderDetail orderDetail = GetNewOrderDetails(order, repo.GetProductById(int_id));
+				order.Total += orderDetail.UnitPrice * (100 - (decimal)orderDetail.Discount) / 100;
+				o.CreateOder(order);
+				AddOrUpdateOrderDetail(order, repo.GetProductById(int_id), orderDetail);
 				return View();
 			}
 			else
 			{
-				odRep.AddOrderDetail(od);
-				order.Total += od.UnitPrice;
+				OrderDetail orderDetail = GetNewOrderDetails(order, repo.GetProductById(int_id));
+				order.Total += orderDetail.UnitPrice * (100 - (decimal)orderDetail.Discount) / 100;
 				o.UpdateOrder(order);
+				AddOrUpdateOrderDetail(order, repo.GetProductById(int_id), orderDetail);
 				return View();
 			}
-			
-			
-        }
-        // GET: Product/Details/5
-        public async Task<IActionResult> Details(int? id)
+
+
+		}
+		// GET: Product/Details/5
+		public async Task<IActionResult> Details(int? id)
 		{
 			if (id == null)
 			{
